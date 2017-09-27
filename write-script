@@ -1,5 +1,5 @@
-e#!/bin/sh
+#!/bin/sh
 name1=kartupelis
-readonly name1
-unset name1
+#readonly name1 #scripts variable pieskir read only ipasibu
+#unset name1    #scripts variable vertibu izdzesh, ja readonly tad nevares
 echo $name1
