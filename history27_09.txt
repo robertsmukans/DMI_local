@@ -1,0 +1,121 @@
+    1  VirtualBox --startvm XP
+    2  git clone https://github.com/ansiiis/DMI_local
+    3  ls
+    4  cd DMI_local
+    5  ls
+    6  cat history20_09.txt
+    7  ls
+    8  git-download
+    9  cat history20_09.txt
+   10  cat git-download
+   11  git-download
+   12  ~ git-download
+   13  cd git-download
+   14  git-downloadls
+   15  cat git-download
+   16  ls
+   17  cat history20_09.txt
+   18  ls
+   19  KARTUPELIS_1=10
+   20  echo KARTUPELIS_1 =$
+   21  echo KARTUPELIS_1=$KARTUPELIS_1
+   22  echo =$KARTUPELIS_1
+   23  name="kartupelis"
+   24  echo =$name
+   25  echo name is =$name
+   26  echo name is $name
+   27  echo darzenis ir $name
+   28  clear $name
+   29  ls
+   30  echo $=
+   31  echo $name
+   32  unset name
+   33  $name
+   34  name=10
+   35  $name
+   36  echo $name
+   37  nano
+   38  ls
+   39  chmod 744 executable.sh 
+   40  ls
+   41  executable.sh
+   42  $PATH
+   43  PATH=$PATH:/home/user/darbi/DMI_local
+   44  ls
+   45  executable.sh
+   46  ls
+   47  nano executable.sh
+   48  executable.sh
+   49  PATH=$PATH:/home/user/DMI_local
+   50  executable.sh
+   51  ls
+   52  pwd
+   53  ls
+   54  git-upload
+   55  ls
+   56  executable.sh
+   57  nano executable.sh
+   58  executable.sh
+   59  nano executable.sh
+   60  executable.sh
+   61  nano executable.sh
+   62  executable.sh
+   63  name=11
+   64  echo $name
+   65  executable.sh
+   66  nano executable.sh
+   67  executable.sh
+   68  nano executable.sh
+   69  executable.sh
+   70  ls
+   71  nano executable.sh
+   72  ls
+   73  cat write-script
+   74  rm executable.sh 
+   75  ls
+   76  chmod 744 write-script
+   77  ls
+   78  git-upload
+   79  lsls
+   80  ls
+   81  git-upload
+   82  NANO git-upload
+   83  nano git-upload
+   84  git-upload
+   85  nano git-upload
+   86  git-upload
+   87  git-download
+   88  ls
+   89  cd ..
+   90  ls
+   91  cat /etc/shells
+   92  ls
+   93  rm DMI_local
+   94  rm DMI_local -rf
+   95  ls
+   96  git clone https://github.com/ansiiis/DMI_local
+   97  ls
+   98  cd DMI_local
+   99  ls
+  100  write-script
+  101  nano write-script
+  102  write-script
+  103  ls
+  104  nano write-text
+  105  ls
+  106  nano write-script
+  107  ls
+  108  git-download
+  109  ls
+  110  rm DMI_local -r
+  111  rm DMI_local -rf
+  112  ls
+  113  nano git-download
+  114  ls
+  115  nano git-upload
+  116  ls
+  117  cd ..
+  118  ls
+  119  cd DMI_local
+  120  ls
+  121  history > history27_09.txt
