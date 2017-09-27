@@ -1,0 +1,5 @@
+e#!/bin/sh
+name1=kartupelis
+readonly name1
+unset name1
+echo $name1
