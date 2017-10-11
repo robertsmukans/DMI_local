@@ -56,4 +56,4 @@ END
 a=$1
 b=$2
 valadd=`expr $a + $b`
-echo $valadd
+echo "$a+$b=" $valadd
