@@ -17,43 +17,50 @@ END
 
 ####https://www.tutorialspoint.com/unix/unix-basic-operators.htm
 ###: << ''END iekš apastrofiem
-: << 'END'
 
-##Aritmētiskie
+##Operācijas ar argumentiem
 # var lietot a=10,b=69 un tad piesauc ar $a un $b
+#: << 'END'
+if [ $# == 2 ]
+then
+a=$1
+b=$2
 echo "Addition" #+
-valadd=`expr 5 + 3`
+valadd=`expr $a + $b`
 echo $valadd
 echo "Subtraction" #-
-valsub=`expr 5 - 3`
+valsub=`expr $a - $b`
 echo $valsub
 echo "Multiplication" #\*
-valmul=`expr 5  \* 3`
+valmul=`expr $a  \* $b`
 echo $valmul
 echo "Division" #/
-valdiv=`expr 5 / 3`
+valdiv=`expr $a / $b`
 echo $valdiv
 echo "Modulus" #%
-valmod=`expr 5 % 3`
+valmod=`expr $a % $b`
 echo $valmod
 echo "Assignment" #=
-valass=`expr 5 = 3`
+valass=`expr $a = $b`
 echo $valass
-echo "Equality" #==
-if [ 6 == 4 ]
-then echo true
-else echo false
 fi
+echo "Equality" #==
+ if [ 6 == 4 ]
+  then echo true
+  else echo false
+ fi
 echo "Not Equality" #!=
 if [ 6 != 4 ]
 then echo true
 else echo false
 fi
-END
+#END
 
 ##Argumenta ievade
+: <<'END'
 #$1,$2 - 1. un 2. arguments caur ievadi
 a=$1
 b=$2
 valadd=`expr $a + $b`
-echo "$a+$b=" $valadd
+echo "$a+$b=$valadd"
+END
