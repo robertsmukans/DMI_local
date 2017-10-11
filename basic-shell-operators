@@ -1,0 +1,40 @@
+#!/bin/bash
+
+####https://www.tutorialspoint.com/unix/unix-basic-operators.htm
+###: << ''END iekš apastrofiem
+: << 'END'
+##Aritmētiskie
+# var lietot a=10,b=69 un tad piesauc ar $a un $b
+echo "Addition" #+
+valadd=`expr 5 + 3`
+echo $valadd
+echo "Subtraction" #-
+valsub=`expr 5 - 3`
+echo $valsub
+echo "Multiplication" #\*
+valmul=`expr 5  \* 3`
+echo $valmul
+echo "Division" #/
+valdiv=`expr 5 / 3`
+echo $valdiv
+echo "Modulus" #%
+valmod=`expr 5 % 3`
+echo $valmod
+echo "Assignment" #=
+valass=`expr 5 = 3`
+echo $valass
+echo "Equality" #==
+if [ 6 == 4 ]
+then echo true
+else echo false
+fi
+echo "Not Equality" #!=
+if [ 6 != 4 ]
+then echo true
+else echo false
+fi
+END
+
+##Relational
+
+# -eq

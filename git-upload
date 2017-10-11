@@ -1,7 +1,8 @@
 #!/bin/bash
+#if [ $# == 1 ]
 git config --global user.name "ansiiis"
 git config --global user.email ansiiis1@gmail.com.lv
 git add .
-git commit -m "20171009_00_05"
+git commit -m "20171010_09_55"
 git push origin master
 
