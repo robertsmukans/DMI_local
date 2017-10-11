@@ -3,6 +3,6 @@
 git config --global user.name "ansiiis"
 git config --global user.email ansiiis1@gmail.com.lv
 git add .
-git commit -m "20171010_09_55"
+git commit -m "20171011_11_05"
 git push origin master
 

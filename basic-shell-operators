@@ -1,8 +1,24 @@
 #!/bin/bash
+#####PROTOKODS
+: << 'END'
+name1=kartupelis
+echo "File Name: $0"
+echo "First Parameter : $1"
+echo "Second Parameter : $2"
+echo "Quoted Values: $@"
+echo "Quoted Values 2: $*"
+echo "Total Number of Parameters : $#"
+echo "procesa numurs:$$"
+##2.Piemers/3.Piemers
+#readonly name1 #scripts variable pieskir read only ipasibu
+#unset name1    #scripts variable vertibu izdzesh, ja readonly tad nevares
+echo $name1
+END
 
 ####https://www.tutorialspoint.com/unix/unix-basic-operators.htm
 ###: << ''END iekš apastrofiem
 : << 'END'
+
 ##Aritmētiskie
 # var lietot a=10,b=69 un tad piesauc ar $a un $b
 echo "Addition" #+
@@ -35,6 +51,9 @@ else echo false
 fi
 END
 
-##Relational
-
-# -eq
+##Argumenta ievade
+#$1,$2 - 1. un 2. arguments caur ievadi
+a=$1
+b=$2
+valadd=`expr $a + $b`
+echo $valadd
