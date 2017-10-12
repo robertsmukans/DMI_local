@@ -36,7 +36,8 @@ y		#yank - copy
 ynw		#yank n words
 p		#paste, pastes yanked or the last deleted text
 rx		#replaces the character with x R lets you replace more than one char
-cn		#deletes til n(1,2,3...$) and puts you in insert mode
+ce		#deletes til end of word and puts in insert
+cnw		#deletes til n(1,2,3...$) and puts you in insert mode
 o		#makes a line below the cursor and puts you in insert mode
 O		#makes a line above the cursor and puts you in insert mode
 :s/old/new	#substitute "old" with "new" once in the line

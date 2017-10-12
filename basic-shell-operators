@@ -45,12 +45,12 @@ valass=`expr $a = $b`
 echo $valass
 fi
 echo "Equality" #==
- if [ 6 == 4 ]
+ if [ a == b ]
   then echo true
   else echo false
  fi
 echo "Not Equality" #!=
-if [ 6 != 4 ]
+if [ a != b ]
 then echo true
 else echo false
 fi
