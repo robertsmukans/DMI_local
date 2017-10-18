@@ -20,7 +20,8 @@ END
 
 ##Operācijas ar argumentiem
 # var lietot a=10,b=69 un tad piesauc ar $a un $b
-#: << 'END'
+
+: << 'END'
 if [ $# == 2 ]
 then
 a=$1
@@ -54,7 +55,7 @@ if [ a != b ]
 then echo true
 else echo false
 fi
-#END
+END
 
 ##Argumenta ievade
 : <<'END'
@@ -64,3 +65,38 @@ b=$2
 valadd=`expr $a + $b`
 echo "$a+$b=$valadd"
 END
+
+## 18.10.17 Dialogs
+: <<'END'
+echo "ievadi 2 ciparus"
+read a
+read b
+c=`expr $a + $b`
+echo "a + b ir $c"
+END
+
+: <<'END'
+echo "ievadi a un b, ko salidzinasim"
+read a
+read b
+if (( $a==$b )) 
+then
+echo "$a ir vienads ar $b"
+elif (( $a > $b ))
+then 
+echo "$a ir lielaks par $b"
+else 
+echo "$b ir lielaks par $a"
+fi
+END
+
+#: <<'END'
+echo "ievadi a,b,c ko salidzinasim"
+read -r a b c
+if [ $# == 3 ]
+then
+echo $a $b $c | -n -r |
+else
+echo "ievadi visas 3 vertibas viena rinda"
+fi
+#END
