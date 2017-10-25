@@ -46,10 +46,10 @@ valass=`expr $a = $b`
 echo $valass
 fi
 echo "Equality" #==
- if [ a == b ]
-  then echo true
-  else echo false
- fi
+if [ a == b ]
+then echo true
+else echo false
+fi
 echo "Not Equality" #!=
 if [ a != b ]
 then echo true
@@ -90,13 +90,35 @@ echo "$b ir lielaks par $a"
 fi
 END
 
-#: <<'END'
-echo "ievadi a,b,c ko salidzinasim"
-read -r a b c
-if [ $# == 3 ]
-then
-echo $a $b $c | -n -r |
-else
-echo "ievadi visas 3 vertibas viena rinda"
-fi
-#END
+#Burbulmetode
+
+
+
+# 25.10.17 sorting array loop
+: <<'END'
+94 a=$1
+95 if (( $a > 0 )); then
+96 echo "gal. zars (ja apakszars)"
+97 elif (( $a == 0 )); then
+98 echo "alt. zars (tikai ja gad.)"
+99 else
+100 echo "gal. zars (ne apakszars)"
+101 fi
+END
+
+: <<'END'
+a=( "$@" )
+n=$#
+k=0
+while (( $k < n)); do
+echo ${a[$k]}
+k=`expr $k+1`
+done
+END
+
+a=( "$@" )
+n=$#
+k=0
+while (( $k < n )); do
+if (( ${a[$n]} > ${a[$n+1]));
+
