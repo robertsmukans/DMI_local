@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 
 #http://www.cplusplus.com/reference/cstdio/printf/?kw=printf

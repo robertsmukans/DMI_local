@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- utf-8 -*-
 
 a=input("ievadi cikla ilgumu\n ")

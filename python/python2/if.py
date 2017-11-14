@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- utf-8 -*-
 a=input("ievadi skaitli\n")
 if a > 0:
