@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 #Lūdzu palaist ar python3
-print("Lietotāj, ievadi skaitli un programma izveidos dalījumu tabulu nākamajiem desmit skaitļiem!")
+print("Lietotāj, ievadi skaitli un programma izveidos atlikumu tabulu nākamajiem desmit skaitļiem!")
 a=eval(input("Lietotāj, ievadiet skaitli!\n"))
 b=type(a)
 print("Jūs ievadījāt skaitli %s, kura datu tips ir %s\n"%(a,b))
