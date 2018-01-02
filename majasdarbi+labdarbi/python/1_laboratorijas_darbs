@@ -1,0 +1,27 @@
+#!/usr/bin/python
+#-*- coding: utf-8 -*-
+
+# Sasveicināmies un iegūstam datus!
+print("Programma izveidos dalījumu tabulu jūsu izvēlētam skaitlim un nākamajiem desmit skaitļiem!")
+a=eval(input("Lietotāj, ievadiet skaitli!\n"))
+print("Jūs ievadījāt skaitli {}, kura datu tips ir {}!".format(a,type(a)))
+
+# Izveidojam tabulas nosaukumu un aprakstošos lielumus!
+print()
+print("{:*^60}".format('Dalījumu tabula'))
+print((len(str(a))*' '+5*' '), end='')
+m=1
+for i in range(10):
+    print(m,end='%    ')    
+    m=m+1
+print()
+
+# Izveidosim dalījumu tabulu ar 2 ciklu palīdzību
+for i in range(10):
+    print("{:5}".format(a),end=' ')
+    n=1
+    for i in range(10):
+        print("{}".format(a%n),end='     ')
+        n=n+1
+    a=a+1
+    print()
