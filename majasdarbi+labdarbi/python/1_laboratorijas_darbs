@@ -8,8 +8,8 @@ print("Jūs ievadījāt skaitli {}, kura datu tips ir {}!".format(a,type(a)))
 
 # Izveidojam tabulas nosaukumu un aprakstošos lielumus!
 print()
-print("{:*^60}".format('Dalījumu tabula'))
-print((len(str(a))*' '+5*' '), end='')
+print("{:*^{width}}".format('Dalījumu tabula',width=(len(str(a))+59)))
+print("{}".format((len(str(a)))*' '+2*' '),end='')
 m=1
 for i in range(10):
     print(m,end='%    ')    
@@ -17,8 +17,11 @@ for i in range(10):
 print()
 
 # Izveidosim dalījumu tabulu ar 2 ciklu palīdzību
+import numpy as np
+x=np.arange(a,a+10)
+maxi=np.amax(x)
 for i in range(10):
-    print("{:5}".format(a),end=' ')
+    print("{:{width}}".format(a,width=len(str(maxi))),end=' ')
     n=1
     for i in range(10):
         print("{}".format(a%n),end='     ')
