@@ -1,5 +1,0 @@
-#!/usr/bin/python
-a=eval(input('yo'))
-import numpy as np
-x=np.arange(a,a+10)
-print(x)
