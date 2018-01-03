@@ -1,2 +1,28 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+
+# Importējam moduļus.
+from math import atan,sqrt,factorial
+
+# Definējam savu funkciju.
+def my_atan(x):
+    S=0
+    for i in range(500):
+        a=(factorial(2*i))/(factorial(i)**2*2**(2*i)*(2*i+1))*((x**2/(1+x**2))**i) 
+        S=S+a
+    s=x/sqrt(1+x**2)*S
+    return s
+    
+# Ziņa pasniedzējam.
+print("Šis darbs veikts Python 3.0")
+
+# Iegūstam lietotāja datus.
+x=float(eval(input("Lietotāj, ievadi argumentu x, lai iegūtu arctan vērtību!\n")))
+print("Jūs ievadījāt skaitli {}, aprēķināsim arctan({})".format(x,x))
+# Izvadām lietotājam nepieciešamo informāciju.
+y=atan(x)
+yy=my_atan(x)
+print("x={}".format(x))
+print("Math moduļa iebūvētās funkcijas aprēķins: arctan({})={}".format(x,y))
+print("my_atan pašizveidotās funkcijas aprēķins: arctan({})={}".format(x,yy))
+
