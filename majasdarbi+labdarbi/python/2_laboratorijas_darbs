@@ -10,6 +10,10 @@ def my_atan(x):
     for i in range(500):
         a=(factorial(2*i))/(factorial(i)**2*2**(2*i)*(2*i+1))*((x**2/(1+x**2))**i) 
         S=S+a
+        if i<=10:
+            print("S{}={}".format(i,S))
+        if i==499:
+            print("S{}={}".format(i,S))
     s=x/sqrt(1+x**2)*S
     return s
     
