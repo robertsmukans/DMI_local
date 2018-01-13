@@ -15,33 +15,22 @@ def my_atan(x):
     s=x/np.sqrt(1+x**2)*S
     return s
 
+#Ziņa pasniedzējam.
+print("Darbs veikts Python 3.0")
 # Zīmēšana
-a=-0.1
-b=2*np.pi
-x=np.arange(a,b,0.01)
+a=0
+b=3*np.pi
+x=np.arange(a,b,0.5)
 y=my_atan(x)
 plt.plot(x,y)
 plt.grid()
+#plt.show()
+
+# Atvasinājums un tā zīmēšana
+n=len(x)
+y_prim=[]
+for i in range(n-1):
+    y_prim.append((y[i+1]-y[i])/(x[i+1]-x[i]))
+plt.plot(x[:n-1],y_prim)
 plt.show()
 
-# Saknes meklēšana
-delta_x=1.e-3
-funa=my_atan(a)
-funb=my_atan(b)
-if funa*funb>0:
-    print("Starp [{:.3f},{:.3f}] funkcijai nav saknes".format(a,b))
-    print("Vai funkcijai šajā intervālā ir pāra sakņu skaits, ko ar šo funkciju nemeklē")
-    exit()
-print("Uz robežām f({:.3f})={:.3f} f({:.3f})={:.3f}".format(a,funa,b,funb))
-k=0
-while b-a>delta_x:
-    x=(a+b)/2
-    k=k+1
-    funx=my_atan(x)
-    print("{:04}. a={:6.3f} f({:6.3f})={:6.3f} b={:6.3f}".format(k,a,x,funx,b))
-    if funa*funx>0:
-        a=x
-    else:
-        b=x
-print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
-print("Iterāciju skaits ir {}".format(k))
