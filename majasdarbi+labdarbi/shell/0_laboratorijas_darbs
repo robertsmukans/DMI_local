@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Iegūstam datus no lietotāja
+echo -e "Lietotāj, ievadiet 3 veselus skaitļus!"
+read a b c
+#echo -e "\n$a $b $c"
