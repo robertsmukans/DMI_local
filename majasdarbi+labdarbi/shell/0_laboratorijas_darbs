@@ -1,6 +1,48 @@
 #!/bin/bash
 
-# Iegūstam datus no lietotāja
-echo -e "Lietotāj, ievadiet 3 veselus skaitļus!"
-read a b c
-#echo -e "\n$a $b $c"
+# Pastāstam, ko veic programma un iegustam datus.
+echo -e "Lietotāj, ievadiet veselus skaitļus un tiks izvadīta:!"
+echo 1. minimālā vērtība
+echo 2. maksimālā vērtība
+echo 3. vidējā vērtība
+echo 4. sakārtota virkne
+echo 5. mediāna
+echo 6. moda
+A=("$@")
+elements=$#
+echo jūsu $elements vērtības veido skaitļu masīvu a=[$@]
+echo
+ 
+# Vispirms sakārtosim masīvu augošā secībā!
+sortA=()
+i=0
+n=0
+k=0
+while (( $n < 3)); do
+	while (( $k < $elements )); do
+		echo $k. while cikls
+		if (( ${A[0]} > ${A[i+1]})); then
+			sortA+=${A[i+1]}' '
+		else
+			sortA+=${A[0]}' '
+			while (( $i < (`expr $elements - 1`) )); do
+				echo kartupelis $i
+				sortA+=${A[i+1]}' '
+				i=`expr $i + 1` 
+			done
+			echo sortA=[$sortA]
+			break
+		fi
+		i=`expr $i + 1`
+		echo sortA=[$sortA]
+	k=`expr $k + 1`
+	done
+	echo A=SortA
+	A=(${sortA[@]})
+	echo ${A[0]}
+	echo Sorta=unset
+	sortA=()
+	n=`expr $n + 1`
+	k=0
+	i=0
+done
