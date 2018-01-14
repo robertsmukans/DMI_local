@@ -40,7 +40,10 @@ median=${A[`expr $elements / 2`]}
 fi
 
 # Apreķinām modu
-
+for (( i=0; i < $elements; i++ )); do
+for (( j=$i; j < $elements; j++ )); do
+if (( ${A[i]} == ${A[j]} )); then
+${A[i]}array+=${A[i]}
 
 # Izvadīsim, ko lietotajs vēlas
 echo 1. ${A[0]}
