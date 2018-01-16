@@ -6,7 +6,8 @@ from math import factorial
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Definējam savu funkciju.
+# Definējam savu funkciju. Atgādinu, ka 2. laboratorijas darbs ir pildīts ar rekurences reizinātāju.
+
 def my_atan(x):
     S=0
     for i in range(500):
@@ -45,3 +46,5 @@ while b-a>delta_x:
         b=x
 print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
 print("Iterāciju skaits ir {}".format(k))
+
+# Vērtību meklēšana.

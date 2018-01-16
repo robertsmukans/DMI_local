@@ -1,0 +1,7 @@
+#!/usr/bin/python
+#-*- coding: utf-8 -*-
+
+# Importējam nepieciešamos moduļus.
+import random
+import numpy as np
+
