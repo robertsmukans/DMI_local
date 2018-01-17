@@ -16,7 +16,7 @@ def my_atan(x):
     return s
 
 # Ziņa pasniedzējam.
-print("Darbs veikts Python 3.0")
+print("Darbs veikts Python 3.0")plt
 
 # Zīmēšana
 a=0

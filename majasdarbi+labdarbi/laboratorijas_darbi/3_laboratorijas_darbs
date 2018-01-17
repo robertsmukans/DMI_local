@@ -48,4 +48,10 @@ print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
 print("Iterāciju skaits ir {}".format(k))
 
 # Vērtību meklēšana.
+tar=1
+delta_x=1.e-3
+funa=my_atan(a)
+funb=my_atan(b)
+if (funa > tar) or (funb < tar):
+    print("intervala saknes nav")
 
