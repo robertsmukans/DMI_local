@@ -11,13 +11,13 @@ import matplotlib.pyplot as plt
 def my_atan(x):
     S=0
     for i in range(500):
-        a=(factorial(2*i))/(factorial(i)**2*2**(2*i)*(2*i+1))*((x**2/(1+x**2))**i) 
+        a=(factorial(2*i))/(factorial(i)**2*2**(2*i)*(2*i+1))*((x**2/(1+x**2))**i)
         S=S+a
     s=x/np.sqrt(1+x**2)*S
     return s
 
 # Zīmēšana
-a=-0.1
+a=1
 b=2*np.pi
 x=np.arange(a,b,0.01)
 y=my_atan(x)
@@ -48,3 +48,4 @@ print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
 print("Iterāciju skaits ir {}".format(k))
 
 # Vērtību meklēšana.
+

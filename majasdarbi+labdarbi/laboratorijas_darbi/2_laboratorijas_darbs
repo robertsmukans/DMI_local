@@ -21,6 +21,7 @@ def my_atan(x):
 
     s=x/sqrt(1+x**2)*S
     return s
+
 # Ziņa pasniedzējam.
 print("Šis darbs veikts Python 3.0")
 
@@ -32,9 +33,11 @@ print("Rekurences reizinātājs:")
 print("2K*(2K-1)                   x^2")
 print("--------------------- *    ------")
 print("k^2*2^2*(2K+1)/(2K-1)      1+x^2")
+
 # Iegūstam lietotāja datus.
 x=float(eval(input("Lietotāj, ievadi argumentu x, lai iegūtu arctan vērtību!\n")))
 print("Jūs ievadījāt skaitli {}, aprēķināsim arctan({})".format(x,x))
+
 # Izvadām lietotājam nepieciešamo informāciju.
 y=atan(x)
 yy=my_atan(x)

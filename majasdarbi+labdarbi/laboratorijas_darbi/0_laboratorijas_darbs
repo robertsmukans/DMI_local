@@ -40,14 +40,34 @@ median=${A[`expr $elements / 2`]}
 fi
 
 # Apreķinām modu
-for (( i=0; i < $elements; i++ )); do
-for (( j=$i; j < $elements; j++ )); do
-if (( ${A[i]} == ${A[j]} )); then
-${A[i]}array+=${A[i]}
-
+pag=0
+virs=0
+for (( i=0; i < `expr $elements - 1`; i++ )); do
+	if (( ${A[i]} == ${A[i+1]} )); then
+		pag=`expr $pag + 1`
+	else
+		pag=0
+	fi
+	if (( $pag >= $virs )); then
+		virs=$pag
+	fi
+done
+pag=0
+moda=
+for (( i=0; i < `expr $elements - 1`; i++ )); do
+	if (( ${A[i]} == ${A[i+1]} )); then
+		pag=`expr $pag + 1`
+	else
+		pag=0
+	fi
+	if (( $pag == $virs )); then
+		moda+=${A[i]}' '
+	fi
+done
 # Izvadīsim, ko lietotajs vēlas
 echo 1. ${A[0]}
 echo 2. ${A[$elements - 1]}
 echo 3. $vid
 echo 4. ${A[@]}
 echo 5. $median japiemin, ka bash nestrādā ar komatu, tādēļ ja vēlaties precizitāti ar komatu, jāpiesauc ārējais modulis.
+echo 6. $moda

@@ -14,7 +14,7 @@ print()
 print("{}".format((len(str('{:.2f}'.format(a))))*' '+2*' '),end='')
 m=1
 for i in range(10):
-    print(m,end='%       ')    
+    print(m,end='%       ')
     m=m+1
 print()
 
