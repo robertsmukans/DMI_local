@@ -8,11 +8,11 @@ echo 3. vidējā vērtība
 echo 4. sakārtota virkne
 echo 5. mediāna
 echo 6. moda
-A=("$@")
-elements=$#
-echo jūsu $elements vērtības veido skaitļu masīvu a=[$@]
+read -a A
+elements=${#A[@]}
+echo jūsu $elements vērtības veido skaitļu masīvu A=[${A[@]}]
 echo
- 
+
 # Vispirms sakārtosim masīvu augošā secībā!
 for (( i=0; i < $elements; i++ )); do
 for (( j=$i; j < $elements; j++ )); do
@@ -29,45 +29,48 @@ sum=0
 for (( i=0; i < $elements; i++ )); do
 sum=`expr $sum + ${A[i]}` 
 done
-vid=`expr $sum / $elements`
 
-# Aprēķināsim medianu
-if (( $elements % 2 == 0 )); then
-step=`expr ${A[$elements / 2]} + ${A[$elements / 2 - 1]}`
-median=`expr $step / 2`
-else
-median=${A[`expr $elements / 2`]}
-fi
 
 # Apreķinām modu
 pag=0
 virs=0
 for (( i=0; i < `expr $elements - 1`; i++ )); do
-	if (( ${A[i]} == ${A[i+1]} )); then
-		pag=`expr $pag + 1`
-	else
-		pag=0
-	fi
-	if (( $pag >= $virs )); then
-		virs=$pag
-	fi
+if (( ${A[i]} == ${A[i+1]} )); then
+	pag=`expr $pag + 1`
+else
+	pag=0
+fi
+if (( $pag >= $virs )); then
+	virs=$pag
+fi
 done
 pag=0
 moda=
 for (( i=0; i < `expr $elements - 1`; i++ )); do
-	if (( ${A[i]} == ${A[i+1]} )); then
-		pag=`expr $pag + 1`
-	else
-		pag=0
-	fi
-	if (( $pag == $virs )); then
-		moda+=${A[i]}' '
-	fi
+if (( ${A[i]} == ${A[i+1]} )); then
+	pag=`expr $pag + 1`
+else
+	pag=0
+fi
+if (( $pag == $virs )); then
+	moda+=${A[i]}' '
+fi
 done
+
 # Izvadīsim, ko lietotajs vēlas
 echo 1. ${A[0]}
 echo 2. ${A[$elements - 1]}
-echo 3. $vid
+echo -e "3. \c"
+awk "BEGIN {print $sum/$elements}"
 echo 4. ${A[@]}
-echo 5. $median japiemin, ka bash nestrādā ar komatu, tādēļ ja vēlaties precizitāti ar komatu, jāpiesauc ārējais modulis.
+
+# Aprēķināsim medianu
+if (( $elements % 2 == 0 )); then
+#step=`expr ${A[$elements / 2]} + ${A[$elements / 2 - 1]}`
+echo -e "5. \c" 
+awk "BEGIN {print (${A[$elements/2]}+${A[$elements/2 - 1]})/2}"
+else
+echo -e "5. \c"
+awk "BEGIN {print ${A[$elements/2]}}"
+fi
 echo 6. $moda
