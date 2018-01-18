@@ -20,7 +20,7 @@ def my_atan(x):
     s=x/sqrt(1+x**2)*S
     return s
 
-N =5
+N =20000
 x = []
 y = []
 a = 0.
