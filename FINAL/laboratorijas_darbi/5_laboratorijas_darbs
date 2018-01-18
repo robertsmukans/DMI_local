@@ -53,3 +53,11 @@ plt.show()
 areaRect = (b-a)*(d-c)
 areaFunc = areaRect * len(green_x) / N
 print(areaFunc)
+
+# Ko dara programma
+"""
+Programma salīdzina random ģenerētu masīvu vērtības ar arktangensa vērtibu no
+cita random ģenerēta massīva un secīgi  pievieno pie zaļajiem/sarkanajiem x un
+y. Programma pierāda, ka uniform random izkārtojums visos vienāda garuma
+intervālos ir vienlīdz iespējami. 
+"""
