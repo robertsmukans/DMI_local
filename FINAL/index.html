@@ -208,10 +208,15 @@
      <pre>
      	#!usr/bin/python3
 	#!-*- coding: utf-8 -*-
+	import matlibplot.pyplot as plt
+	from math import atan
 	kartupelis=eva(input("ievadi skaitli!!!"))
+	print("Ievaditā skaitļa {} tips ir {}".format(kartupelis,type(kartupelis)))
+	plt.plot(x,atan(kartupelis))
+	plt.show()
 	<pre>
+	<pre>Skripts iegūst datus no lietotāja, analizē to veidu - izvada to un uzzīmē arktangensa grafiku no šīs vērtibas  <pre>
      <ul>
-      <li><a href="https://github.com/ansiiis/DMI_local/blob/master/python/hello.py">Python: skripta neliels apraksts - ...</a></li>
      </ul>
     <li><a href="https://github.com/ansiiis/DMI_local/blob/master/python/variables.py">Python: mainīgie</a></li>
     <li><a href="https://github.com/ansiiis/DMI_local/blob/master/python/dialog.py">Python: datu ievade/izvade</a></li>
