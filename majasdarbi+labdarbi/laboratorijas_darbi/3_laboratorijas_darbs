@@ -17,7 +17,7 @@ def my_atan(x):
     return s
 
 # Zīmēšana
-a=1
+a=-1
 b=2*np.pi
 x=np.arange(a,b,0.01)
 y=my_atan(x)
@@ -48,10 +48,24 @@ print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
 print("Iterāciju skaits ir {}".format(k))
 
 # Vērtību meklēšana.
-tar=1
-delta_x=1.e-3
+a=-1
+b=2*np.pi
+k=0
 funa=my_atan(a)
 funb=my_atan(b)
-if (funa > tar) or (funb < tar):
+if funa > 0 or funb < 0:
     print("intervala saknes nav")
+    exit()
+while  b-a>delta_x:
+    x=(a+b)/2
+    k=k+1
+    funx=my_atan(x)
+    print("{:04}. a={:6.3f} f({:6.3f})={:6.3f} b={:6.3f}".format(k,a,x,funx,b))
+    if funa*funx>0:
+        a=x
+    else:
+        b=x
+print("a={:.3f} f({:.3f})={:.3f} b={:.3f}".format(a,x,funx,b))
+print("Iterāciju skaits ir {}".format(k))
+
 
