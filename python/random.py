@@ -1,3 +1,4 @@
+#!/usr/bib/python2
 # -*- coding: utf-8 -*-
 import random
 import numpy as np

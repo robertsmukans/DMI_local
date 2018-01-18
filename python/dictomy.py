@@ -1,9 +1,10 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 #Šis darbs veikts python3!
-import matplotlib.pyplot as plt
+
 import numpy as np
-#
+import matplotlib.pyplot as plt
+
 def mans_sinuss(x):
     a=(-1)**0*x**1/(1)
     S=a
