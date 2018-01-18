@@ -39,7 +39,7 @@ print("uz robezam f(%.2f)=%.2f f(%.2f)=%.2f"%(a,funa,b,funb))
 k=0
 while b-a>delta_x:
     x=(a+b)/2
-    k=k+1    
+    k=k+1
     funx=mans_sinuss(x)
     print("%3d. a=%.4f f(%.4f)=%7.4f b=(%.4f)"%(k,a,x,funx,b,))
     if funa*funx>0:
