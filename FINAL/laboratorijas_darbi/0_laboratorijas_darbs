@@ -52,6 +52,9 @@ if (( ${A[i]} == ${A[i+1]} )); then
 else
 	pag=0
 fi
+if (( $virs == 0 ));then
+	break
+fi
 if (( $pag == $virs )); then
 	moda+=${A[i]}' '
 fi
